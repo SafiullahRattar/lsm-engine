@@ -1,0 +1,12 @@
+[package]
+name = "lsm-engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["Safiullah Rattar"]
+description = "A Log-Structured Merge-tree storage engine in Rust"
+license = "MIT"
+keywords = ["lsm", "storage-engine", "database", "key-value"]
+categories = ["database-implementations"]
+
+[dependencies]
+thiserror = "2"
