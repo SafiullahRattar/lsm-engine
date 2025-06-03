@@ -10,3 +10,4 @@ categories = ["database-implementations"]
 
 [dependencies]
 thiserror = "2"
+crc32fast = "1"
