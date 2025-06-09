@@ -3,6 +3,7 @@
 //! A Log-Structured Merge-tree (LSM-tree) storage engine written in Rust.
 
 pub mod bloom;
+pub mod compaction;
 pub mod error;
 pub mod manifest;
 pub mod memtable;
