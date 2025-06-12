@@ -82,6 +82,8 @@ pub fn compact(
     let merged = merge_iter.collect_remaining();
 
     // Filter tombstones if requested
+    // NOTE: Only drop tombstones when compacting the full set of SSTables.
+    // Otherwise we risk exposing a previously-shadowed value from an older SSTable.
     let entries: Vec<(Vec<u8>, Vec<u8>)> = if drop_tombstones {
         merged
             .into_iter()
