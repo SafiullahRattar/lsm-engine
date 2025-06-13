@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["Safiullah Rattar"]
 description = "A Log-Structured Merge-tree storage engine in Rust"
 license = "MIT"
+readme = "README.md"
 keywords = ["lsm", "storage-engine", "database", "key-value"]
 categories = ["database-implementations"]
 
@@ -13,5 +14,10 @@ thiserror = "2"
 crc32fast = "1"
 
 [dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
 tempfile = "3"
 rand = "0.8"
+
+[[bench]]
+name = "throughput"
+harness = false
